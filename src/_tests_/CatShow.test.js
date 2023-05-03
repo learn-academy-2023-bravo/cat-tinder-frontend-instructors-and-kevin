@@ -5,7 +5,7 @@ import mockCats from "../mockCats"
 
 const renderShow = () => {
 render(
-  <MemoryRouter>
+  <MemoryRouter initialEntries={["/catshow/1"]}>
     <Routes>
       <Route path="/catshow/:id" element={<CatShow cats={mockCats} />} />
     </Routes>
@@ -16,6 +16,6 @@ render(
 describe("<CatShow/>", () => {
   it("renders cat card with enjoy", () => {
     renderShow()
-    expect(screen.getByText(mockCats[0].enjoys)).toBeInTheDocument()
+    expect(screen.getByText(`${mockCats[0].name} likes ${mockCats[0].enjoys}`, {exact: false})).toBeInTheDocument()
     })
   })
