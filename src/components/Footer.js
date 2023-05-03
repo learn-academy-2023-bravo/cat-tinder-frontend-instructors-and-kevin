@@ -1,11 +1,8 @@
-
-
 const Footer = () => {
-
   return (
-    <>
-      <h3>This is the Footer</h3>
-    </>
+    <div className="footer">
+      <h3>Brought to you by the letter 'Q'</h3>
+    </div>
   )
 }
 
