@@ -1,4 +1,5 @@
-import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap"
+import { NavLink } from "react-router-dom"
+import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 
 
 const CatIndex = ({cats}) => {
@@ -24,9 +25,9 @@ const CatIndex = ({cats}) => {
             <CardSubtitle>
               {cat.age}
             </CardSubtitle>
-            <Button>
+            <NavLink to={`/catshow/${cat.id}`}>
               The Cat's Meow
-            </Button>
+            </NavLink>
           </CardBody>
         </Card>
         )
