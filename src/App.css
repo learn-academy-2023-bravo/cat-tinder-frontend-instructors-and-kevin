@@ -8,7 +8,7 @@ body {
 
 .footer {
   margin-top: auto;
-  color: lightblue;
+  color: #0d6efd;;
   text-align: center;
 }
 
@@ -37,13 +37,15 @@ a:active {
   text-decoration: none;
 }
 
-.all-cat-cards {
+.cards-wrapper{
   display:flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-
+.all-cat-cards {
+  margin: 20px;
+}
 
 .home-center {
   padding-top: 70px;
@@ -59,3 +61,11 @@ a:active {
   border-radius: 20px;
 }
 
+.cat-form {
+  margin:50px 400px 200px 400px;
+}
+
+.btn-secondary {
+  background-color: #0d6efd !important;
+  margin:auto 0 !important;
+}

@@ -5,7 +5,7 @@ import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 const CatIndex = ({cats}) => {
 
   return (
-    <main>
+    <main className="cards-wrapper">
       {cats?.map((cat, index) => {
         return(
           <Card
@@ -13,6 +13,7 @@ const CatIndex = ({cats}) => {
             style={{
               width: '18rem'
             }}
+            key={index}
           >
           <img
             alt="Sample"

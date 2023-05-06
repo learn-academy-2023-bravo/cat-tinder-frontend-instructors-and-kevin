@@ -26,7 +26,7 @@ const CatNew = ({ createCat }) => {
 
   return (
     <>
-      <Form>
+      <Form className="cat-form">
         <FormGroup>
           <Label for="cat-name">Name</Label>
           <Input
