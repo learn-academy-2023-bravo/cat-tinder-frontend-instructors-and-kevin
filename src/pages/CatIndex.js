@@ -32,9 +32,7 @@ const CatIndex = ({cats}) => {
           </CardBody>
         </Card>
         )
-      
       })}
-   
     </main>
   )
 }

@@ -1,14 +1,14 @@
+import { useEffect, useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+
 import Footer from './components/Footer'
 import Header from './components/Header'
-
 import CatEdit from './pages/CatEdit'
 import CatIndex from './pages/CatIndex'
 import CatNew from './pages/CatNew'
 import CatShow from './pages/CatShow'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import { useState, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
 
 import './App.css'
 
@@ -67,7 +67,7 @@ const App = () => {
       method: "DELETE"
     })
     .then(response => response.json())
-    .then(payload => readCat())
+    .then(() => readCat())
     .catch(errors => console.log("delete errors:", errors))
   }
 return(

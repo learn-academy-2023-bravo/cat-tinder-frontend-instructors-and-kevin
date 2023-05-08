@@ -1,13 +1,14 @@
-import { useParams, NavLink, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate, useParams } from "react-router-dom"
 import { Button } from 'reactstrap'
 
 const CatShow = ({ cats, deleteCat }) => {
   const { id } = useParams()
   const navigate = useNavigate()
-  let selectedCat = cats.find((cat) => cat.id === +id)
+  let selectedCat = cats?.find((cat) => cat.id === +id)
 
-  const handleSubmit = () => {
-    deleteCat(id)
+  const handleSubmit = (selectedCat) => {
+    debugger
+    deleteCat(selectedCat.id)
     navigate('/catindex')
   }
   return (
@@ -25,8 +26,8 @@ const CatShow = ({ cats, deleteCat }) => {
         <NavLink to={`/catedit/${id}`} className="nav-link">
           Edit Cat Profile
         </NavLink>
-        <Button onClick={handleSubmit}>Delete Cat Profile</Button>
-    
+        <Button onClick={()=> {handleSubmit(selectedCat)}}>Delete Cat Profile</Button>
+  
       </div>
     </main>
   )
